@@ -261,3 +261,84 @@ public class RedisConfig {
 
 
 ## 5、JWT
+
+### 5.1、常見的認證機制
+
+#### 5.1.1、HTTP Basic Auth
+
+![image-20220221144011832](spring-security_lezijie.assets/image-20220221144011832.png)
+
+#### 5.2.2、Cookie Auth
+
+![image-20220221144157753](spring-security_lezijie.assets/image-20220221144157753.png)
+
+#### 5.1.3、OAuth
+
+![image-20220221144541690](spring-security_lezijie.assets/image-20220221144541690.png)
+
+#### 5.1.4、Token Auth
+
+![image-20220221144727810](spring-security_lezijie.assets/image-20220221144727810.png)
+
+![image-20220221144909941](spring-security_lezijie.assets/image-20220221144909941.png)
+
+![image-20220221145142989](spring-security_lezijie.assets/image-20220221145142989.png)
+
+
+
+### 5.2、JWT 簡介
+
+#### 5.2.1、什麼是 JWT
+
+![image-20220221145559700](spring-security_lezijie.assets/image-20220221145559700.png)
+
+#### 5.2.2、JWT 組成
+
+![image-20220221145845186](spring-security_lezijie.assets/image-20220221145845186.png)
+
+##### 5.2.2.1、頭部(Header)
+
+![image-20220221145904393](spring-security_lezijie.assets/image-20220221145904393.png)
+
+##### 5.2.2.2、負載
+
+![image-20220221150133629](spring-security_lezijie.assets/image-20220221150133629.png)
+
+![image-20220221150355263](spring-security_lezijie.assets/image-20220221150355263.png)
+
+##### 5.2.2.3、簽證/簽名(Signature)
+
+![image-20220221150531963](spring-security_lezijie.assets/image-20220221150531963.png)
+
+### 5.3、JJWT 簡介
+
+#### 5.3.1、什麼是 JJWT
+
+![image-20220221150826046](spring-security_lezijie.assets/image-20220221150826046.png)
+
+#### 5.3.2、快速入門
+
+##### 5.3.2.1、token 的創建
+
+```xml
+
+```
+
+
+
+##### 5.3.2.2、token 的解析
+
+![image-20220221153119425](spring-security_lezijie.assets/image-20220221153119425.png)
+
+##### 5.3.2.3、token 過期校驗
+
+![image-20220221154850142](spring-security_lezijie.assets/image-20220221154850142.png)
+
+
+
+##### 5.3.2.4、自定義 claims
+
+![image-20220221162112178](spring-security_lezijie.assets/image-20220221162112178.png)
+
+
+
