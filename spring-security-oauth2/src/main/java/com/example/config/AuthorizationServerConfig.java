@@ -9,6 +9,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -60,7 +61,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				// 秘鑰
 				.secret(passwordEncoder.encode("112233"))
 				// 重定向地址
-				.redirectUris("https://www.google.com/")
+//				.redirectUris("https://www.google.com/")
+				.redirectUris("http://localhost:8081/login")
 				// 授權範圍
 				.scopes("all")
 				// accessToken 失效時間
@@ -73,6 +75,14 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				 * password: 密碼模式
 				 * refresh_token: 刷新令牌
 				 */
-				.authorizedGrantTypes("authorization_code", "password", "refresh_token");
+				.authorizedGrantTypes("authorization_code", "password", "refresh_token")
+				// 自動授權
+				.autoApprove(true);
+	}
+
+	@Override
+	public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+		// 獲取秘鑰，必須要身分認證 (配置單點登入必備)
+		security.tokenKeyAccess("isAuthenticated()");
 	}
 }
