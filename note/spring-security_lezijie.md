@@ -342,3 +342,12 @@ public class RedisConfig {
 
 
 
+
+
+## 6、Spring Security OAuth2 整合 JWT
+
+### 6.1、整合 JWT
+
+![image-20220221165936557](spring-security_lezijie.assets/image-20220221165936557.png)
+
+![image-20220221170810632](spring-security_lezijie.assets/image-20220221170810632.png)
