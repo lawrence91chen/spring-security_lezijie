@@ -22,4 +22,9 @@ public class JwtTokenStoreConfig {
 
 		return jwtAccessTokenConverter;
 	}
+
+	@Bean
+	public JwtTokenEnhancer jwtTokenEnhancer() {
+		return new JwtTokenEnhancer();
+	}
 }

@@ -351,3 +351,19 @@ public class RedisConfig {
 ![image-20220221165936557](spring-security_lezijie.assets/image-20220221165936557.png)
 
 ![image-20220221170810632](spring-security_lezijie.assets/image-20220221170810632.png)
+
+### 6.2、擴展 JWT 中存儲的內容
+
+
+
+![image-20220221172307304](spring-security_lezijie.assets/image-20220221172307304.png)
+
+![image-20220221172348663](spring-security_lezijie.assets/image-20220221172348663.png)
+
+
+
+### 6.3、Java 中解析 JWT 中的內容
+
+
+
+### 6.4、刷新令牌
