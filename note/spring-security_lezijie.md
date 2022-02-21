@@ -379,3 +379,13 @@ public class RedisConfig {
 
 
 ### 6.4、刷新令牌
+
+
+
+![image-20220221174333926](spring-security_lezijie.assets/image-20220221174333926.png)
+
+
+
+![image-20220221175011844](spring-security_lezijie.assets/image-20220221175011844.png)
+
+![image-20220221175122186](spring-security_lezijie.assets/image-20220221175122186.png)

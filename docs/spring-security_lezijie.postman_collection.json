@@ -131,6 +131,56 @@
 			"response": []
 		},
 		{
+			"name": "/oauth/token REFRESH",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "112233",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbImFsbCJdLCJhdGkiOiJhZWQwOGQ1Ny05N2I5LTRmNGMtOTMzYi0zZTdhOTQzMTcwNmEiLCJleHAiOjE2NDU1MjMzODIsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImp0aSI6IjM0YjBiNDA1LTE2YzgtNDVlZi1hYmY0LTU0MjdmMTMzMTBiMiIsImNsaWVudF9pZCI6ImNsaWVudCIsImVuaGFuY2UiOiJlbmhhbmNlciBpbmZvIn0.UzJ8QCplVFkeEkd-Gwrmi3sw3rBojMLomO6kj3bU4GE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "/user/getCurrentUser",
 			"request": {
 				"auth": {
@@ -168,7 +218,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NDU0NzkzNTksImF1dGhvcml0aWVzIjpbImFkbWluIl0sImp0aSI6ImIyYjc4Y2YxLThmODAtNDI0Yy1iNDE4LWM3NTAxNGNmMDk4OSIsImNsaWVudF9pZCI6ImNsaWVudCIsImVuaGFuY2UiOiJlbmhhbmNlciBpbmZvIn0.0xz3myaCR1KvEYTTe-WAawuPyADQq16DDTNBPa7pZAo",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE2NDU0MzcxODYsImF1dGhvcml0aWVzIjpbImFkbWluIl0sImp0aSI6ImY2NWU5YjIwLTViZTctNDcxMS1hZDMwLTNlNjJkMDBhNTQ1NSIsImNsaWVudF9pZCI6ImNsaWVudCIsImVuaGFuY2UiOiJlbmhhbmNlciBpbmZvIn0.1JJ2fqwnlHzcf6RrEY9wEf0w1gdN225dpm6NgNQmJQI",
 							"type": "string"
 						}
 					]

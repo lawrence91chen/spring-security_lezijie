@@ -63,11 +63,16 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.redirectUris("https://www.google.com/")
 				// 授權範圍
 				.scopes("all")
+				// accessToken 失效時間
+				.accessTokenValiditySeconds(60)
+				// refreshToken 失效時間
+				.refreshTokenValiditySeconds(86400)
 				/**
 				 * 授權類型
 				 * authorization_code: 授權碼模式
 				 * password: 密碼模式
+				 * refresh_token: 刷新令牌
 				 */
-				.authorizedGrantTypes("authorization_code", "password");
+				.authorizedGrantTypes("authorization_code", "password", "refresh_token");
 	}
 }
