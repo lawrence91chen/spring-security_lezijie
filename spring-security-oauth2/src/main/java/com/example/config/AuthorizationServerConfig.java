@@ -1,6 +1,8 @@
 package com.example.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -8,6 +10,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+
 	@Override
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients
@@ -16,7 +21,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				// 客戶端 ID
 				.withClient("client")
 				// 秘鑰
-				.secret("112233")
+				.secret(passwordEncoder.encode("112233"))
 				// 重定向地址
 				.redirectUris("https://www.google.com/")
 				// 授權範圍
