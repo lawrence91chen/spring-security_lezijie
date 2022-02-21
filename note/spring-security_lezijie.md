@@ -364,6 +364,18 @@ public class RedisConfig {
 
 ### 6.3、Java 中解析 JWT 中的內容
 
+```xml
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+```
+
+
+
+![image-20220221173741419](spring-security_lezijie.assets/image-20220221173741419.png)
+
 
 
 ### 6.4、刷新令牌
